@@ -14,6 +14,14 @@ I have already build some code that will work out with relative accuracy what th
 
 
 # API info 
+The Api is a simple post request to the server, that contains a reg, and notes the notes are rquered however can be empty. 
+
+you will get back.
+
+200 code - the data structure of the car info. 
+201 code - the reg is not valid in the backend/ we could not find info about that reg.
+400 - there was a bad request 
+429 - You have hit the rate limit of request by that IP address for the time frame, try waiting a while
 
 ``` bash
 curl --location 'https://carlookup.server.thomasdye.net/api/v1/lookup' \
