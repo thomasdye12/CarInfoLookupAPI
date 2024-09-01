@@ -10,3 +10,16 @@ There is no private data here, all data is public in one form or another. I will
 I have already build some code that will work out with relative accuracy what the type is, eg police car etc. 
 
 ![Reflector -2-30-29-3--27-8-24](https://github.com/user-attachments/assets/93a851aa-0250-4ccc-aadc-50920ed73d9e)
+
+
+
+# API info 
+
+``` bash
+curl --location 'https://carlookup.server.thomasdye.net/api/v1/lookup' \
+--header 'Content-Type: application/json' \
+--data '{
+    "reg":"oo00ooo",
+    "notes":"someinfohere"
+}'
+```
