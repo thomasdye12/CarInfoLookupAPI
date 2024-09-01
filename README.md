@@ -21,13 +21,14 @@ you will get back.
 200 code - the data structure of the car info. 
 201 code - the reg is not valid in the backend/ we could not find info about that reg.
 400 - there was a bad request 
-429 - You have hit the rate limit of request by that IP address for the time frame, try waiting a while
+429 - You have hit the rate limit of request by that IP address for the time frame, try waiting a while, 10 requests per min 
+500 - this will indicate either a server issue, or if invalid response data, eg expected info is missing - this is not set yet, there is no Structure for returned data
 
 ``` bash
 curl --location 'https://carlookup.server.thomasdye.net/api/v1/lookup' \
 --header 'Content-Type: application/json' \
 --data '{
     "reg":"oo00ooo",
-    "notes":"someinfohere"
+    "notes":"Some Look up info"
 }'
 ```
